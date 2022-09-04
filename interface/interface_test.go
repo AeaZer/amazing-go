@@ -14,9 +14,11 @@ func TestCompare(t *testing.T) {
 	var d interface{} = []int{1, 2, 3}
 
 	t.Log(a == b)
+	t.Log(a == c)
 	t.Log(c == d)
 
 	// output:
 	//  interface_test.go:16: true
+	//  interface_test.go:17: false
 	//  interface_test.go:17: panic: runtime error: comparing uncomparable type []int [recovered]
 }
